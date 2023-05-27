@@ -54,8 +54,8 @@ const message = loveMessages[randomIndex];
 
 var options = {
   method: "POST",
-  headers: { "content-type": "application/x-www-form-urlencoded" },
-  body: querystring.stringify({
+  headers: { "content-type": "application/json" },
+  body: JSON.stringify({
     token: process.env.API_TOKEN,
     to: process.env.RECIPIENT_PHONE,
     body: message,
@@ -80,7 +80,7 @@ const send = async () => {
 
 const host = "0.0.0.0";
 
-setInterval(async () => send(), 960000);
+setInterval(async () => send(), 60000);
 
 const http = require("http");
 
