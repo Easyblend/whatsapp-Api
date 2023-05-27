@@ -80,7 +80,13 @@ const send = async () => {
 
 const host = "0.0.0.0";
 
-setInterval(async () => send(), 960000);
+let timer = 0;
+const text = () => {
+  timer++;
+  console.log(timer);
+};
+
+setInterval(async () => text(), 1000);
 
 const http = require("http");
 
