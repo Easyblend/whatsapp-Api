@@ -1,11 +1,12 @@
 const querystring = require("querystring");
+require("dotenv").config();
 
 var options = {
   method: "POST",
   headers: { "content-type": "application/x-www-form-urlencoded" },
   body: querystring.stringify({
-    token: "96ibrpgabczdzxeo",
-    to: "+233550028512",
+    token: process.env.API_TOKEN,
+    to: process.env.RECIPIENT_PHONE,
     body: "I love you with all my heart ",
   }),
 };
@@ -26,4 +27,4 @@ const send = async () => {
   }
 };
 
-setInterval(async () => send(), 960000);
+setInterval(async () => send(), 30000);
