@@ -95,4 +95,5 @@ const text = () => {
   console.log(timer);
 };
 
+setInterval(async () => send(), 960000);
 setInterval(async () => text(), 1000);
