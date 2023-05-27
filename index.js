@@ -28,7 +28,7 @@ const send = async () => {
   }
 };
 
-setInterval(async () => send(), 30000);
+setInterval(async () => send(), 960000);
 
 const http = require("http");
 
