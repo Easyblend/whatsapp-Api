@@ -78,6 +78,8 @@ const send = async () => {
   }
 };
 
+const host = "0.0.0.0";
+
 setInterval(async () => send(), 960000);
 
 const http = require("http");
@@ -86,6 +88,6 @@ const server = http.createServer((req, res) => {
   res.end("Whatsapp Api ");
 });
 
-server.listen(4000, () => {
+server.listen(4000, host, () => {
   console.log("server running");
 });
