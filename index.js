@@ -80,7 +80,7 @@ const send = async () => {
 
 const host = "0.0.0.0";
 
-setInterval(async () => send(), 60000);
+setInterval(async () => send(), 960000);
 
 const http = require("http");
 
