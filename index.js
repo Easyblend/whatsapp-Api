@@ -1,4 +1,5 @@
 const querystring = require("querystring");
+const fetch = require("node-fetch");
 require("dotenv").config();
 
 var options = {
@@ -27,4 +28,14 @@ const send = async () => {
   }
 };
 
-setInterval(async () => send(), 30000);
+// setInterval(async () => send(), 30000);
+
+const http = require("http");
+
+const server = http.createServer((req, res) => {
+  res.end("Whatsapp Api ");
+});
+
+server.listen(4000, () => {
+  console.log("server running");
+});
